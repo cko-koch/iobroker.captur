@@ -1,48 +1,16 @@
-![Logo](admin/zoe.png)
-# iobroker.zoe2
+![Logo](admin/captur.jpg)
+# iobroker.captur
 =================
-
-**Tests:**
-[![Build Status](https://travis-ci.org/fungus75/ioBroker.zoe2.svg?branch=master)](https://travis-ci.org/fungus75/ioBroker.zoe2)
-[![Known Vulnerabilities](https://snyk.io/test/github/fungus75/ioBroker.zoe2/badge.svg)](https://snyk.io/test/github/fungus75/ioBroker.zoe2)
-
-**Downloads**
-[![Downloads](https://img.shields.io/npm/dm/iobroker.zoe2.svg)](https://www.npmjs.com/package/iobroker.zoe2)
- ![Number of Installations](https://iobroker.live/badges/zoe2-installed.svg)
-
-**License:**
-[![License](https://img.shields.io/github/license/fungus75/ioBroker.zoe2)](https://github.com/fungus75/ioBroker.zoe2/blob/master/LICENSE)
-
-**Features:**
-[![Feature Requests](https://feathub.com/fungus75/ioBroker.zoe2?format=svg)](https://feathub.com/fungus75/ioBroker.zoe2)
-
-Simple ioBroker-Adapter to get some basic values from Renault ZOE and use it in ioBroker. 
-
-
-IMPORTANT!!! IF YOU UPDATE FROM A VERSION BEFORE 0.2.2, YOU HAVE TO REENTER YOUR PASSWORD BECAUSE STARTING WITH 0.2.2 PASSWORD IS SAVED ENCRYPTED!!!
-
-**API KEY!!! IF ADAPTER STOPS WORKING PLEASE ALWAYS LOOK AT https://github.com/fungus75/ioBroker.zoe2/wiki BECAUSE RENAULT OFTEN CHANGES THEIR API KEY!!!**
-
-
-PLEASE NOTE: THIS ADAPTER USES THE SAME API AS THE MY RENAULT APP. BUT YOU MUST HAVE TO SET UP MY RENAULT APP TO WORK BEFORE USING THIS ADAPTER. i.e. on Android: https://play.google.com/store/apps/developer?id=RENAULT+SAS - if you want to use the old api, please use https://github.com/fungus75/ioBroker.zoe instead.
-
-PLEASE NOTE: THIS IS A VERY EARLY STATE OF DEVELOPMENT, USE OF YOUR OWN RISK
-
-PLEASE NOTE: AFTER ANY UPDATE OF THE ADAPTER GO TO SETUP-SCREEN, CHANGE SOMETHING SO THAT SAVE IS ENABLED, CHANGE IT BACK AND HIT SAVE!
 
 If this adapter is not available on the ioBroker-Admin-View, please use the following command to install it (from command-line on your ioBroker-Server):
 
-```npm install https://github.com/fungus75/ioBroker.zoe2/tarball/master/```
+```npm install https://github.com/cko-koch/iobroker.captur/tarball/master/```
 
 Or you can use the GitHub-Button (labeled: install from own URL) in the Adapter-View and enter this URL on the "other"-Tab. This can also be used to update to the current adapter-version:
 
-```https://github.com/fungus75/ioBroker.zoe2/tarball/master/```
-(if this url does not work, use https://github.com/fungus75/ioBroker.zoe2.git instead)
-
+```https://github.com/cko-koch/iobroker.captur/tarball/master/```
 
 You can use the method to update the adapter to the most recent version.
-
-
 
 
 After that the adapter should show up in the ioBroker-Admin-View.
@@ -136,73 +104,6 @@ for your great documentation and work.
 
 ### 0.2.3 (2021-07-29)
 - Code Adjustments, Error-Handling
-
-### 0.2.2 (2021-07-26)
-- Store Password Encrypted (You have to reset it, if updating from older version)
-
-### 0.2.1 (2021-07-23)
-- Code optimisation 
-
-### 0.2.0 (2021-02-12)
-- Adapter supports compact mode (required if adapter should be listed in official repo)
-
-### 0.1.5 (2021-02-09)
-- bugfix gigya parameter changed https://github.com/fungus75/ioBroker.zoe2/issues/17
-
-### 0.1.4 (2021-02-05)
-- added: kamereonapikey as setup parameter because it changed by Feb. 1st
-- added: stopChargeWorkaroundHour: Because the API has no feature to stop charging, the stop-charging button starts scheduled charging to a very uncommon time. Configure the hour with that parameter
-- bugfix https://github.com/fungus75/ioBroker.zoe2/issues/15
-- bugfix https://github.com/fungus75/ioBroker.zoe2/issues/16
-- bugfix https://github.com/fungus75/ioBroker.zoe2/issues/14
-
-### 0.1.3 (2020-11-17)
-- added: setup-value useHVACApi, see https://github.com/fungus75/ioBroker.zoe2/issues/10
-
-### 0.1.2 (2020-07-28)
-- changed: call charge-start API when "pressed" chargeEnable. Hopefully it helps on older ZOEs
-
-### 0.1.1 (2020-07-18)
-- added chargeCancel and chargeEnable. See "controll charging"
-
-### 0.1.0 (2020-07-03)
-- bugfix: https://github.com/fungus75/ioBroker.zoe2/issues/6, thanks to https://github.com/damack
-
-### 0.0.9 (2020-06-25)
-- added: getLocation can be turned on/off in config (useful for older ZOEs which do not allow getLocation)
-
-### 0.0.8 (2020-06-18)
-- bugfix: https://github.com/fungus75/ioBroker.zoe2/issues/2
-- bugfix: https://github.com/fungus75/ioBroker.zoe2/issues/3
-
-### 0.0.7 (2020-06-18)
-- bugfix: https://github.com/fungus75/ioBroker.zoe2/issues/2
-- added: gpsLatitude
-- added: gpsLongitude 
-
-### 0.0.6 (2020-04-30)
-- added: chargingPower
-- added: batteryCapacity
-- added: batteryAvailableEnergy
-- changed: Using battery-status v2 API (supplies better values for newer ZOEs, thanks Jack-RK-24 for testing)
-
-### 0.0.5 (2020-04-29)
-- added: config-paramter ignore API error (when set, the Adapter tries to ignore some API-Errors)
-
-### 0.0.4 (2020-04-21)
-- added: preconNow => starts precon (hvac)
-
-### 0.0.3 (2020-04-16)
-- added: totalMileage
-
-### 0.0.2 (2020-04-15)
-- first working version for github
-- reads out some values (as shown in the Features list)
-
-### 0.0.1 (2020-04-06)
-- nonworking version, just to create initial repo on github
-- code taken 1:1 from iobroker.zoe
-- small adjustments, first access to the new renault api
 
 ## License
 The MIT License (MIT)
