@@ -603,9 +603,9 @@ function getLocation(globalParams, curStep) {
 			adapter.log.info('gpsLongitude:'+gpsLongitude);
 			if (gpsLongitude !== undefined) setValue(globalParams.zoe_vin,"gpsLongitude","number",gpsLongitude,"data");
 
-                        var lastUpdateTime=data.lastUpdateTime;
-                        adapter.log.info('lastUpdateTime:'+lastUpdateTime);
-                        if (lastUpdateTime !== undefined) setValue(globalParams.zoe_vin,"lastUpdateTime","number",lastUpdateTime,"data");
+			var lastUpdateTime=data.lastUpdateTime;
+			adapter.log.info('lastUpdateTime:'+lastUpdateTime);
+			if (lastUpdateTime !== undefined) setValue(globalParams.zoe_vin,"lastUpdateTime","number",lastUpdateTime,"data");
 
 			processNextStep(globalParams, curStep);
 		}
